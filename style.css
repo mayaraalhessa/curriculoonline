@@ -1,0 +1,142 @@
+/* @TODO Otimizar a importação das fontes com um único link */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Anta&family=Oswald:wght@200..700&display=swap');
+
+/* pt -> Pontos de tipografia 
+padrão ABNT -> Arial 12pt 
+mm -> milímetro
+cm -> centímetro */
+
+/* Alguns valores de propriedades não tem unidade de medida.
+   Exemplo: line-height, aspect-ratio, font-weight */
+
+* { /* "*" -> todos os elementos aplicáveis */
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    /* box-sizing: como o CSS calcula o tamanho dos elementos */
+}
+
+:root { /* root -> elemento raiz (html), mais alta hierarquia */
+    font-size: 16px; /* tamanho base do rem -> 1rem = 16px */
+    scroll-behavior: smooth; /* comportamento da rolagem: suave */
+}
+
+body {
+    width: 80vw; /* 80vw: 80% da viewport width */
+    margin: auto; /* margem com ajuste automático */
+    font-size: 20px; /* o padrão é 16px */
+    font-family: "DM Sans", sans-serif;
+    font-weight: 200;
+}
+
+.nome-curriculo {
+    font-family: "Anta", sans-serif;
+    font-size: 3rem;
+    margin: 2rem 1rem 3rem 4rem; /* shorthand para margin-top margin-right margin-bottom margin-left*/
+}
+
+section {
+    padding: 40px; /* preenchimento [interno] */
+}
+
+#apresentacao {
+    background-color: #f4c5c5;
+}
+
+#formacaoAcademica {
+    background-color: #cdf7cd;
+}
+
+#experienciaProfissional {
+    background-color: #f8e7d3;
+}
+#hardSkills {
+background-color: #dec5f4;
+}
+#softSkills {
+    background-color: #c5f1f4;
+}
+#idiomas {
+    background-color: #c5f4e5;
+}
+
+/* @TODO
+1. ESTILIZAR AS DEMAIS SEÇÕES
+2. ESTILIZAR ELEMENTOS ARTICLE
+3. TIRAR SOMBRAS DE TEXTO */
+#tecnologias {
+    display: flex; /* exibe como caixa flexível (Flexbox) */
+    /* Flexbox tem várias propriedades que trabalham junto */
+    justify-content: space-between; /* evenly(espaço em todas as margens) ou alinha o conteúdo no eixo principal */
+    
+}
+/* Combinadores */
+
+article h1 { /* h1 descendente de article */
+    font-size: 2rem;
+    font-weight: bold; /* bold = 700 */
+    background-color: rgb(174, 241, 241);
+    color:rgb(0, 208, 255)
+}
+
+article h2 {/* h2 descendente de article */
+    font-size: 1.5rem;
+    font-weight: 600; /* demi-bold (quase negrito) */
+    background-color: rgb(241, 174, 231);
+    color:rgb(233, 73, 185);
+    margin: 0 0 1rem 0;
+}
+.autor{
+    font-style: oblique;
+    font-weight: 600;
+    font-size: 80%;
+}
+.data{
+    font-style: oblique;
+    font-size: 80%;
+}
+.continue-lendo{
+    background-color: #f00cf4;
+    padding: .5rem 1rem;
+    margin-top: 1rem;
+    border-radius: 8px;
+}
+.continue-lendo a{
+color: #c5f1f4;
+text-decoration: none;
+}
+article p {
+    text-align: justify;
+}
+
+article {
+    width: 30%; /* 30% do pai (section id="tecnologias") */
+    background-color: #dec5f4;
+    padding: 1rem;
+}
+
+.titulo-secao {
+    text-transform: uppercase; /* transforma o texto em maiúsculas */
+    font-family: "Anta", sans-serif;
+    color: rgb(64, 64, 64);
+    font-size: 2rem;
+    margin: 1rem 0 2rem 0; /* valores: cima direita baixo esquerda */
+    padding: 0; /* valores: cima direita baixo esquerda */
+    text-shadow: 1px 1px 2px dimgray;
+}
+
+p {
+    line-height: 1.5; /* altura da linha: 1.5x o tamanho padrão */
+    margin: 1rem 0; /* valores: cima-baixo esquerda-direita */
+}
+
+h3 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    text-shadow: 1px 1px 2px dimgray; /* deslocamentoX deslocamentoY espalhamento cor */
+}

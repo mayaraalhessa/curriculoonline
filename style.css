@@ -23,11 +23,30 @@ cm -> centímetro */
 { /* root -> elemento raiz (html), mais alta hierarquia */
     font-size: 16px; /* tamanho base do rem -> 1rem = 16px */
     scroll-behavior: smooth; /* comportamento da rolagem: suave */
-    --cor-primaria-texto: #6c0056;
-    color: var(--cor-primaria-texto);
    --padding-padrao-secao:40px;
-   --cor-fundo-secao:
-   
+}
+/* TEMA: light */
+[data-tema="light"] {
+--plano-fundo: #e6c5c5;
+--cor-primaria-texto:#353535;
+--cor-fundo-tags: #353535;
+--plano-fundo-apresentacao:#f386dd;
+--plano-fundo-formacaoAcademica: #98cef0;
+--plano-fundo-experienciaProfissional: #cf7bf6;
+--plano-fundo-hardSkills: #f386dd;
+--plano-fundo-softSkills: #98cef0;
+--plano-fundo-idiomas:#cf7bf6;
+}
+[data-tema="dark"] {
+    --plano-fundo: #311992;
+    --cor-primaria-texto:#ffffff;
+    --cor-fundo-tags:#bebebe;
+    --plano-fundo-apresentacao:#f4b4e7;
+    --plano-fundo-formacaoAcademica: #9dd2f3;
+    --plano-fundo-experienciaProfissional: #d7a3ef;
+    --plano-fundo-hardSkills: #f4b4e7;
+    --plano-fundo-softSkills: #9dd2f3;
+    --plano-fundo-idiomas:#d7a3ef;
 }
 
 body 
@@ -37,6 +56,7 @@ body
     font-size: 20px; /* o padrão é 16px */
     font-family: "DM Sans", sans-serif;
     font-weight: 200;
+    background-color: var(--plano-fundo);
 }
 
 .nome-curriculo
@@ -44,6 +64,7 @@ body
     font-family: "Anta", sans-serif;
     font-size: 3rem;
     margin: 2rem 1rem 3rem 4rem; /* shorthand para margin-top margin-right margin-bottom margin-left*/
+    color: var(--cor-primaria-texto);
 }
 
 section 
@@ -53,29 +74,31 @@ section
 
 #apresentacao 
 {
-    background-color: #dec5f4;
+    background-color: var(--plano-fundo-apresentacao);
 }
 
 #formacaoAcademica 
 {
-    background-color: #f5c1ed;
+    background-color: var(--plano-fundo-formacaoAcademica);
 }
 
 #experienciaProfissional 
 {
-    background-color: #c5f1f4;
+    background-color: var(--plano-fundo-experienciaProfissional);
 }
 #hardSkills
  {
-background-color: #dec5f4;
+    background-color: var(--plano-fundo-hardSkills);
 }
 #softSkills
  {
-    background-color:#c5f1f4;
+    background-color: var(--plano-fundo-softSkills);
 }
 #idiomas
  {
-    background-color: #f5ccef;
+    margin: 5rem 0;
+    padding: vaqr(--padding-padrao-secao);
+    background-color: var(--plano-fundo-idiomas);
 }
 #apresentacao,
  #formacaoAcademica,
@@ -83,7 +106,8 @@ background-color: #dec5f4;
  #hardSkills,#softSkills,
   #idiomas
   {
-    var(--padding-padrao-secao)
+    padding: var(--padding-padrao-secao);
+    margin: 3rem 0;
 }
 /* @TODO
 1. ESTILIZAR AS DEMAIS SEÇÕES
@@ -103,7 +127,7 @@ article h1
     font-size: 2rem;
     font-weight: bold; /* bold = 700 */
     background-color: rgb(174, 241, 241);
-    color:rgb(0, 208, 255)
+    color: var(--cor-primaria-texto);
 }
 
 article h2 
@@ -111,7 +135,7 @@ article h2
     font-size: 1.5rem;
     font-weight: 600; /* demi-bold (quase negrito) */
     background-color: #f1aee7;
-    color:#e949b9;
+    color: var(--cor-primaria-texto);
     margin: 0 0 1rem 0;
 }
 .autor
@@ -174,6 +198,7 @@ h3
     text-transform: uppercase;
     margin: 1rem 0;
     text-shadow: 1px 1px 2px dimgray; /* deslocamentoX deslocamentoY espalhamento cor */
+    color: var(--cor-primaria-texto);
 }
 
 .lista-tags li
@@ -183,6 +208,7 @@ h3
     padding: 5px;
     border-radius: 6px;
     margin: 5px ;
+    color: var(--cor-primaria-texto);
 }
 ul
 {
